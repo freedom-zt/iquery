@@ -1,16 +1,11 @@
 (function (window) {
-    // 将一些全局对象，传到框架中的局部变量中。
-    // 好处：提高访问性能。
     var iArray = [],
         push = iArray.push,
         document = window.document;
-    // iquery 就相当于$(jQuery)
-    // 核心函数
     function iquery(selector) {
         return new iquery.fn.init(selector);
     }
 
-    // 由于会经常调用iquery.prototype,因此为其添加一个简写方式
     iquery.fn = iquery.prototype = {
         constructor: iquery,
         selector: '', // 用来判断是iquery对象的属性
