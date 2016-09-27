@@ -952,5 +952,4 @@
         return select;
 
     }());
-
 }(window));
